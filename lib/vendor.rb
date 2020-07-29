@@ -16,11 +16,6 @@ class Vendor
   end
 
   def potential_revenue
-    #find quanitity of item
-    #find price of item
-    #multiply those together
-    #add that number to an array
-    #sum array
     revenue_array = []
     @inventory.each do |item|
       revenue_array << (item[0].price.to_f * item[1])
