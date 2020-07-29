@@ -13,7 +13,11 @@ class ItemTest < Minitest::Test
 
   end
 
-  #def test_it_has_attributes
-  #end
+  def test_it_has_attributes
+    item1 = Item.new({name: 'Peach', price: "$0.75"})
+    item2 = Item.new({name: 'Tomato', price: '$0.50'})
+    assert_equal "Tomato", item2.name
+    assert_equal "0.5", item2.price
+  end
 
 end
