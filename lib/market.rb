@@ -26,5 +26,4 @@ class Market
     end
     vendors_with_items
   end
-
 end
