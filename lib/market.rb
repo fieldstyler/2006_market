@@ -26,4 +26,15 @@ class Market
     end
     vendors_with_items
   end
+
+  def total_inventory
+    complete_inventory = Hash.new
+    @vendors.each do |vendor|
+      complete_inventory[vendor.inventory.keys[0]] = {
+                                                      quantity: vendor.inventory.values[0],
+                                                      vendors: []
+                                                      }
+    end
+    complete_inventory
+  end
 end
